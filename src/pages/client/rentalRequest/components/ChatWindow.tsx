@@ -142,6 +142,10 @@ const ChatWindow: React.FC<ChatProps> = ({ player, user, handleCloseChat, rental
               disabled={!(rental?.endTimeConfirm && dayjs(dayjs()).isAfter(rental.endTimeConfirm))}
             >
               Confirmed completion
+              {
+                !(rental?.endTimeConfirm && dayjs(dayjs()).isAfter(rental.endTimeConfirm)) &&
+                <span className='text-red-600'>{`(${rental?.endTimeConfirm})`}</span>
+              }
             </button>
 
           }
