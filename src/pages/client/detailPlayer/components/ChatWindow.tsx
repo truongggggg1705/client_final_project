@@ -21,7 +21,7 @@ type ChatProps = {
   handleCloseChat: () => void;
   showChat: boolean;
 }
-const SOCKET_SERVER_URL = "https://sever-final-project.onrender.com";
+const SOCKET_SERVER_URL = "https://sever-final-project.onrender.com/";
 const ChatWindow: React.FC<ChatProps> = ({ player, user, handleCloseChat, showChat }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [showRentForm, setShowRentForm] = useState(false);
